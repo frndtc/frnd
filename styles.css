@@ -33,30 +33,43 @@ body {
 .container {
     text-align: center;
     background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
-    padding: 50px;
+    padding: 20px; /* Adjust padding for smaller screens */
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    max-width: 90%; /* Limit the container width on larger screens */
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2.5em; /* Reduced size for mobile */
     margin-bottom: 20px;
 }
 
 .countdown {
-    margin-top: 30px;
+    margin-top: 20px; /* Reduced margin for mobile */
 }
 
 #timer {
-    font-size: 2.5em; /* Increase font size */
+    font-size: 2em; /* Decrease font size for mobile */
     font-weight: bold;
     display: flex; /* Use flex to align items */
     justify-content: center; /* Center the content */
-    gap: 20px; /* Add space between timer units */
+    gap: 15px; /* Adjust gap for smaller screens */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 #timer span {
-    padding: 20px; /* Add padding around each timer unit */
+    padding: 10px; /* Reduced padding for mobile */
     background: rgba(255, 255, 255, 0.2); /* Slightly transparent background for timer units */
     border-radius: 8px; /* Rounded corners */
+}
+
+/* Media Queries for additional responsiveness */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em; /* Further reduce font size on small screens */
+    }
+
+    #timer {
+        font-size: 1.5em; /* Smaller font size for mobile */
+    }
 }
