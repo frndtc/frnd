@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #fff; /* Change text color to white for better contrast */
+    overflow: hidden;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send the video behind other content */
+    overflow: hidden;
+}
+
+.background-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the whole background */
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.countdown {
+    margin-top: 30px;
+}
+
+#timer {
+    font-size: 2.5em; /* Increase font size */
+    font-weight: bold;
+    display: flex; /* Use flex to align items */
+    justify-content: center; /* Center the content */
+    gap: 20px; /* Add space between timer units */
+}
+
+#timer span {
+    padding: 20px; /* Add padding around each timer unit */
+    background: rgba(255, 255, 255, 0.2); /* Slightly transparent background for timer units */
+    border-radius: 8px; /* Rounded corners */
+}
